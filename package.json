@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.5.0"
+  },
+  "name": "1.-wep-app-exchange-v2.0",
+  "version": "1.0.0",
+  "main": "script.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix":"stylelint **/*.css --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

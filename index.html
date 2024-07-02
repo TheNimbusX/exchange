@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="RU">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/lib/moment/moment.js"></script>
+    <title>Web App - Exchange v2</title>
+  </head>
+
+
+  <body>
+    <header class="header">
+      <div class="headertitle">
+        <h1 class="h1">
+          Конвертер валют с использованием ежедневно обновляемых API валют от
+          ЦБРФ.
+        </h1>
+      </div>
+    </header>
+
+    <content class="generalcontent">
+      <div class="course-item-value RUB" data-value="RUB"></div>
+      <div class="courses">
+        <div class="course-item card card-body">
+          <div class="course-item-title">Курс USD</div>
+          <div class="course-item-value" data-value="USD">--.-- &#8743;</div>
+        </div>
+        <div class="course-item card card-body">
+          <div class="course-item-title">Курс EUR</div>
+          <div class="course-item-value" data-value="EUR">--.--</div>
+        </div>
+        <div class="course-item card card-body">
+          <div class="course-item-title">Курс CNY</div>
+          <div class="course-item-value" data-value="CNY">--.--</div>
+        </div>
+      </div>
+      <div class="exchange_window">
+        <div class="text">
+          <div class="textname_left">
+            <p class="textname">У меня есть</p>
+          </div>
+          <div class="textname_right">
+            <p class="textname">Хочу приобрести</p>
+          </div>
+        </div>
+
+        <div class="select_currency_left">
+          <select id="cur1" class="form-control" id="exampleFormControlSelect">
+            <option value="RUB">RUB - Российский Рубль</option>
+            <option value="USD">USD - Долар США</option>
+            <option value="EUR">EUR - Евро</option>
+            <option value="CNY">CNY - Китайский Юань</option>
+          </select>
+        </div>
+
+        <div class="select_currency_right">
+          <select
+            id="cur2"
+            class="form-control_right"
+            id="exampleFormControlSelect_right"
+          >
+            <option value="USD">USD - Долар США</option>
+            <option value="EUR">EUR - Евро</option>
+            <option value="CNY">CNY - Китайский Юань</option>
+            <option value="RUB">RUB - Российский Рубль</option>
+          </select>
+        </div>
+
+        <div class="result_left">
+          <input
+            type="number"
+            id="val"
+            name="number_name"
+            class="input"
+            placeholder="0"
+            min="0"
+          />
+        </div>
+
+        <div class="exchange_image">
+          <img
+            class="exc_img"
+            src="/images/arrows.png"
+            alt="Стрелки в обе стороны"
+          />
+        </div>
+
+        <div class="convert_result">
+          <input
+            class="input"
+            type="number"
+            id="result"
+            name="number_name"
+            placeholder="0"
+            min="0"
+          />
+        </div>
+      </div>
+
+      <div class="info">
+        <p>
+          Все данные актуальны на <br />
+
+          <script>
+            const date = moment().format('D.MM.YYYY, HH:mm');
+            document.write(date);
+          </script>
+
+          <time id="currentTime"> </time>
+        </p>
+      </div>
+    </content>
+
+    <noscript>Your browser doesn't support JavaScript.</noscript>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/script.js"></script>
+
+    <footer class="footer">
+      <h4 class="footer-author">Создано 01.04.2024 Грабом Денисом</h4>
+    </footer>
+  </body>
+</html>
